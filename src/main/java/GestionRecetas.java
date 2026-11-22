@@ -17,8 +17,13 @@ public class GestionRecetas {
                 "5.Eliminar una receta del catálogo\n" +
                 "6.Salir");
         boolean salir = false;
+        int opcion=0;
         while (!salir){
-            int opcion= Integer.parseInt(sc.nextLine());
+            try {
+              opcion = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Introduce un número válido, por favor.");
+            }
             switch (opcion){
                 case 1:
                     mostrarRecetas();
