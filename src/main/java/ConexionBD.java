@@ -14,8 +14,9 @@ public class ConexionBD {
             System.out.println("Conexión establecida correctamente.");
         } catch (SQLException e) {
             System.out.println("No ha sido posible establecer la conexión.");
-            System.out.println(e.getMessage()); } }
-
+            System.out.println(e.getMessage());
+        }
+    }
 
     public static Connection getConexion() throws SQLException {
         return DriverManager.getConnection(URL, USUARIO, CONTRASENA);

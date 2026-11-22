@@ -1,22 +1,27 @@
 import java.util.Objects;
 
 public class Receta {
-    private  int id=contador;
+    private  int id;
     private String nombre;
     private String categoria;
     private int tiempoPreparacion;
     private String dificultad;
     private int raciones;
-    private static int contador=0;
 
     public Receta( String nombre, String categoria, int tiempoPreparacion, String dificultad, int raciones) {
-
         this.nombre = nombre;
         this.categoria = categoria;
         this.tiempoPreparacion = tiempoPreparacion;
         this.dificultad = dificultad;
         this.raciones = raciones;
-        contador++;
+    }
+    public Receta(int id, String nombre, String categoria, int tiempoPreparacion, String dificultad, int raciones) {
+        this.id = id;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.tiempoPreparacion = tiempoPreparacion;
+        this.dificultad = dificultad;
+        this.raciones = raciones;
     }
 
     public int getId() {
